@@ -1,12 +1,12 @@
-# app/main.py — agrega el import y el include_router
+# app/main.py - agrega el import y el include_router
 from fastapi import FastAPI
 
-from app.materias import router          # ← nuevo
+from app.rutas import router  # <- nuevo
 
-app = FastAPI(title="API de Materias", version="1.0.0")
-app.include_router(router)               # ← nuevo
+app = FastAPI(title="API Cooperativa de Transporte", version="1.0.0")
+app.include_router(router)  # <- nuevo
 
 
 @app.get("/")
 def raiz() -> dict:
-    return {"api": "materias", "docs": "/docs"}
+    return {"api": "rutas", "docs": "/docs"}
